@@ -1,8 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using P01_2022_PL_601_2023_RR_655.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<ParqueoDBContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("parqueoDBConnection")
+        )
+     );
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
