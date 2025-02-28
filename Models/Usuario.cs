@@ -6,7 +6,6 @@ namespace P01_2022_PL_601_2023_RR_655.Models
     {
         [Key]
 
-        
             public int IdUsuario { get; set; }
             public string Nombre { get; set; }
             public string Correo { get; set; }
@@ -14,7 +13,7 @@ namespace P01_2022_PL_601_2023_RR_655.Models
             public string Contrasena { get; set; }
             public string Rol { get; set; }
             public ICollection<Reserva> Reservas { get; set; }
-        }
+        
 
     }
 }
