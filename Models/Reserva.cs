@@ -6,16 +6,14 @@ namespace P01_2022_PL_601_2023_RR_655.Models
     {
         [Key]
 
-            public int Id { get; set; }
-            public int UsuarioId { get; set; }
-            public Usuario Usuario { get; set; }
-            public int EspacioId { get; set; }
-            public EspacioDeParqueo Espacio { get; set; }
-            public DateTime FechaReserva { get; set; }
-            public int HorasReservadas { get; set; }
-            public bool Activa { get; set; } 
-        
-
+        public int IdReserva { get; set; }
+        public int IdUsuario { get; set; }
+        public int IdEspacio { get; set; }
+        public DateTime FechaReserva { get; set; }
+        public TimeSpan HoraInicio { get; set; }
+        public int CantidadHoras { get; set; }
+        public string Estado { get; set; }
+        public Usuario Usuario { get; set; }
+        public Parqueo Parqueo { get; set; }
     }
 }
-
